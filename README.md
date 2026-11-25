@@ -5,7 +5,7 @@ I work on making LLM reasoning reliable and checkable with structured knowledge:
 ## Projects
 
 ### Formal deductions with LLMs, checked in Lean (in progress, 2026–27)
-An LLM builds deductions in the proof system of Mileti's *A Mathematical Introduction to Mathematical Logic* (§3.4), one rule per step. A PDDL domain says which rules are legal, a hand-written knowledge graph of the book supplies strategy, and a Lean 4 formalization of the 14 deduction rules checks every step. Planned conditions: LLM alone, + legal moves, + knowledge graph, + LLM-extracted graph, oracle. Repo: [mileti-kg-prover](https://github.com/ZaDrMeister/mileti-kg-prover).
+An LLM builds deductions in the proof system of Mileti's *A Mathematical Introduction to Mathematical Logic* (§3.4), one rule per step. Hand-written rule gates say which moves are legal, an LLM-extracted knowledge graph of the book supplies strategy, and my Lean 4 formalization of the 14 deduction rules checks every step. Planned conditions: LLM alone, + legal moves, + extracted graph, oracle strategy. Repo: [mileti-kg-prover](https://github.com/ZaDrMeister/mileti-kg-prover).
 
 ### Procedural knowledge graph for a small calculus student (fall 2026)
 Penn NLP lab (Chris Callison-Burch). A 3B local model solves generated Calc 1 problems in a precondition-checked tool loop, reading a 73-node graph of textbook procedures; answers graded with SymPy. With one seed the graph hurt (10/30 vs 18/30, McNemar p = 0.10); an oracle ablation suggests the cost is in tool use rather than content (procedure up front 6/10 vs graph tool 4/10). *Report available on request (private repo).*
